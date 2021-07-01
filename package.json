@@ -1,0 +1,20 @@
+{
+  "name": "fe-trainor",
+  "version": "1.0.0",
+  "description": "Front-End test for Trainor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Roberto Rivera",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  },
+  "dependencies": {
+    "postcss-cli": "^8.3.1"
+  }
+}
