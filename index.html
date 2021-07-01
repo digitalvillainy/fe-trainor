@@ -10,19 +10,21 @@
 </head>
 <body>
 
-<header class="flex justify-between mx-5 my-16">
-    <div class="flex content-center">
-        <h5 class="self-center">
+<header x-data="navBar"
+        @click.away="state=false"
+        class="flex justify-between mx-5 my-7 lg:my-16">
+    <div class="flex content-center hidden md:inline-flex xl:flex-none">
+        <h5 class="self-center text-xs lg:text-lg xl:text-xl">
             <strong>
                 Visit
                 <a class="text-primary" href="adirondackbank.com">adirondackbank.com</a>
             </strong>
         </h5>
     </div>
-    <div class="flex content-center flex-initial">
+    <div class="flex w-64 content-center xl:w-auto">
         <img class="self-center" src="./assets/adir_oneline_grn&white_banklocal.svg" alt="Bank Logo">
     </div>
-    <ul class="flex flex-row text-sm text-primary ">
+    <ul class="flex hidden xl:inline-flex flex-row text-sm xl:text-lg 2xl:text-2xl text-primary ">
         <li class="self-center p-2 hover:shadow-md rounded-lg">
             <strong>
                 <a href="./promos">Promotions & Offers</a>
@@ -39,10 +41,46 @@
             </strong>
         </li>
     </ul>
+    <div class="flex flex-col justify-center self-end xl:hidden pb-3">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="fill-current text-primary h-6 w-6"
+             x-show="!state"
+             @click="open"
+             viewBox="0 0 20 20">
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
+        </svg>
+    </div>
+    <ul x-show="state"
+        class="flex flex-col text-sm text-primary">
+        <li @click="state = false"
+            x-show="state"
+            class="self-end">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="fill-current text-primary h-6 w-6"
+                 viewBox="0 0 20 20">
+                <path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"/>
+            </svg>
+        </li>
+        <li class="self-end p-3">
+            <strong>
+                <a href="./promos">Promotions & Offers</a>
+            </strong>
+        </li>
+        <li class="self-end p-3">
+            <strong>
+                <a href="./latest">Latest News</a>
+            </strong>
+        </li>
+        <li class="self-end p-3">
+            <strong>
+                <a href="./locations">Locations</a>
+            </strong>
+        </li>
+    </ul>
 </header>
 
 <div class="w-full shadow-2xl bg-hero-img h-auto w-full text-white flex flex-col">
-    <div class="flex flex-row justify-center py-24">
+    <div class="flex flex-row justify-center lg:py-24">
         <div class="flex">
             <svg class="fill-current text-white m-5 self-center"
                  xmlns="http://www.w3.org/2000/svg"
@@ -58,13 +96,13 @@
                 </g>
             </svg>
         </div>
-        <div class="h-32">
-            <img src="./assets/network.png" alt="computers" class="object-contain self-center">
+        <div class="flex h-auto hidden xl:inline-flex">
+            <img src="./assets/network.png" alt="computers">
         </div>
         <div class="flex flex-col my-14">
-            <img class="h-64 w-auto self-center" src="./assets/cs_tips@1.5x.png" alt="Cyber Security Tips">
+            <img class="h-32 lg:h-64 xl:h-44 w-auto self-center" src="./assets/cs_tips@1.5x.png" alt="Cyber Security Tips">
             <div class="self-center my-14">
-                <button class="bg-ctaYellow rounded px-20 py-6 text-black text-2xl">Learn More</button>
+                <button class="bg-ctaYellow rounded px-16 py-4 lg:px-20 lg:py-6 text-black text-base lg:text-2xl">Learn More</button>
             </div>
         </div>
         <div class="flex">
@@ -81,7 +119,7 @@
             </svg>
         </div>
     </div>
-    <div class="flex justify-center">
+    <div class="flex self-center h-20 w-20">
         <svg xmlns="http://www.w3.org/2000/svg" width="154" height="61" viewBox="0 0 154 61">
             <g>
                 <g>
@@ -111,9 +149,9 @@
 
 <div class="bg-body-img bg-18 bg-no-repeat bg-right w-full">
     <!--Offers-->
-    <div class="my-20  ">
-        <div class="flex flex-row justify-evenly">
-            <div class="bg-white shadow-lg w-64 p-6 text-center">
+    <div class="my-20">
+        <div class="flex flex-col md:justify-center lg:flex-row lg:justify-evenly">
+            <div class="bg-white shadow-lg m-10 p-6 text-center">
                 <div class="flex justify-center bg-gray-300">
                     <img class="h-16 w-auto m-14" src="./assets/example_img.svg" alt="sample image">
                 </div>
@@ -151,7 +189,7 @@
                 </div>
             </div>
 
-            <div class="bg-white shadow-lg w-64 p-6 text-center">
+            <div class="bg-white shadow-lg m-10 p-6 text-center">
                 <div class="flex justify-center bg-gray-300">
                     <img class="h-16 w-auto m-14" src="./assets/example_img.svg" alt="sample image">
                 </div>
@@ -189,7 +227,7 @@
                 </div>
             </div>
 
-            <div class="bg-white shadow-lg w-64 p-6 text-center">
+            <div class="bg-white shadow-lg m-10 p-6 text-center">
                 <div class="flex justify-center bg-gray-300">
                     <img class="h-16 w-auto m-14" src="./assets/example_img.svg" alt="sample image">
                 </div>
@@ -226,14 +264,12 @@
                     </a>
                 </div>
             </div>
-
-
         </div>
     </div>
 
     <!--Section News-->
-    <div class="bg-primary text-white flex flex-row w-4/5 rounded-r-full justify-end  ">
-        <p class="text-2xl p-4">
+    <div class="bg-primary text-white flex flex-row w-4/5 rounded-r-full justify-end">
+        <p class="text-lg lg:text-2xl p-2 lg:p-4">
             Top News & Information
         </p>
 
@@ -264,8 +300,8 @@
     <div class="my-20  ">
 
         <!--Top News & Information-->
-        <div class="flex flex-row justify-evenly">
-            <div class="bg-white shadow-lg w-64 p-6 text-center">
+        <div class="flex flex-col lg:flex-row lg:justify-evenly xl:justify-between">
+            <div class="bg-white shadow-lg m-10 p-6 text-center">
                 <div class="flex justify-center bg-gray-300">
                     <img class="h-28 w-auto m-6" src="./assets/moneyLock.svg" alt="money lock">
                 </div>
@@ -304,7 +340,7 @@
                 </div>
             </div>
 
-            <div class="bg-white shadow-lg w-64 p-6 text-center">
+            <div class="bg-white shadow-lg m-10 p-6 text-center">
                 <div class="flex justify-center bg-gray-300">
                     <img class="h-28 w-auto m-6" src="./assets/moneyLock.svg" alt="money lock">
                 </div>
@@ -344,7 +380,7 @@
                 </div>
             </div>
 
-            <div class="bg-white shadow-lg w-64 p-6 text-center">
+            <div class="bg-white shadow-lg m-10 p-6 text-center">
                 <div class="flex justify-center bg-gray-300">
                     <img class="h-28 w-auto m-6" src="./assets/smiley.svg" alt="money lock">
                 </div>
@@ -392,8 +428,8 @@
 
 <!--Section News-->
 <div class="relative">
-    <div class="bg-primary text-white flex flex-row w-8/12 rounded-l-full transform translate-x-96 absolute -top-8 left-20">
-        <p class="text-2xl p-4">
+    <div class="bg-primary text-white flex flex-row w-10/12 md:w-9/12 lg:w-8/12 rounded-l-full transform translate-x-5 md:translate-x-40 lg:translate-x-72 xl:translate-x-96 absolute -top-6 left-12 md:left-14 xl:left-24">
+        <p class="text-sm lg:text-2xl p-2 lg:p-4">
             Find a Branch or ATM
         </p>
         <div class="flex self-center pr-6">
@@ -425,21 +461,17 @@
             </svg>
         </div>
     </div>
-
-    <div class="w-full">
-        <img src="./assets/map.webp" alt="map">
-    </div>
-
 </div>
 
-<footer class="flex flex-col m-16">
+<img class="w-full right-0 h-auto" src="./assets/map.webp" alt="map">
+
+<footer class="flex flex-col m-6 lg:m-16">
     <div class="self-center m-3 py-10 border-b-2">
         <img src="./assets/ADKBank_Logo_Centered_Color-v2.svg" alt="Bank Logo">
     </div>
-    <div class="justify-center">
-
-        <div class="flex justify-between w-full">
-            <div class="flex-none w-36">
+    <div class="flex flex-col">
+        <div class="flex flex-row justify-center w-full">
+            <div>
                 <img src="./assets/FDIC_Group.svg" alt="FDIC LOGO">
             </div>
             <div class="flex-grow text-center flex-col text-gray-500">
@@ -447,21 +479,31 @@
                 <p> Utica, NY 13501</p>
             </div>
             <div class="flex-none text-gray-500">
-                <p>Digital by TRAINOR</p>
+                <p class="text-xs">Digital by TRAINOR</p>
             </div>
         </div>
-        <ul class="flex flex-row text-sm text-gray-500">
-            <li class="self-center pr-2">
+        <ul class="flex flex-row justify-between xl:justify-start pt-8 text-sm lg:w-full text-gray-500">
+            <li class="lg:pr-2 text-center">
                 <a href="/privacyPolicy">Privacy Policy</a>
             </li>
-            <li class="self-center pr-2">
+            <li class="lg:pr-4 text-center">
                 <a href="/cookiePolicy">Cookie Policy</a>
             </li>
-            <li class="self-center pr-2">
+            <li class=" text-center">
                 <a href="/termsConditions">Terms & Conditions</a>
             </li>
         </ul>
     </div>
 </footer>
+<script>
+    function navBar() {
+        return {
+            state: false,
+            open() {
+                this.state = !this.state;
+            }
+        }
+    }
+</script>
 </body>
 </html>
