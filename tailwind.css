@@ -13941,6 +13941,10 @@ video {
   background-image: url('./assets/background.png');
 }
 
+.bg-body-img {
+  background-image: url('./assets/trees.png');
+}
+
 .from-primary {
   --tw-gradient-from: #006f53;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 111, 83, 0));
@@ -14497,6 +14501,10 @@ video {
           box-decoration-break: clone;
 }
 
+.bg-18 {
+  background-size: 18.75rem;
+}
+
 .bg-auto {
   background-size: auto;
 }
@@ -14507,6 +14515,10 @@ video {
 
 .bg-contain {
   background-size: contain;
+}
+
+.bg-50\% {
+  background-size: 50%;
 }
 
 .bg-fixed {
@@ -32970,6 +32982,10 @@ video {
     background-image: url('./assets/background.png');
   }
 
+  .sm\:bg-body-img {
+    background-image: url('./assets/trees.png');
+  }
+
   .sm\:from-primary {
     --tw-gradient-from: #006f53;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 111, 83, 0));
@@ -33526,6 +33542,10 @@ video {
             box-decoration-break: clone;
   }
 
+  .sm\:bg-18 {
+    background-size: 18.75rem;
+  }
+
   .sm\:bg-auto {
     background-size: auto;
   }
@@ -33536,6 +33556,10 @@ video {
 
   .sm\:bg-contain {
     background-size: contain;
+  }
+
+  .sm\:bg-50\% {
+    background-size: 50%;
   }
 
   .sm\:bg-fixed {
@@ -51867,6 +51891,10 @@ video {
     background-image: url('./assets/background.png');
   }
 
+  .md\:bg-body-img {
+    background-image: url('./assets/trees.png');
+  }
+
   .md\:from-primary {
     --tw-gradient-from: #006f53;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 111, 83, 0));
@@ -52423,6 +52451,10 @@ video {
             box-decoration-break: clone;
   }
 
+  .md\:bg-18 {
+    background-size: 18.75rem;
+  }
+
   .md\:bg-auto {
     background-size: auto;
   }
@@ -52433,6 +52465,10 @@ video {
 
   .md\:bg-contain {
     background-size: contain;
+  }
+
+  .md\:bg-50\% {
+    background-size: 50%;
   }
 
   .md\:bg-fixed {
@@ -70764,6 +70800,10 @@ video {
     background-image: url('./assets/background.png');
   }
 
+  .lg\:bg-body-img {
+    background-image: url('./assets/trees.png');
+  }
+
   .lg\:from-primary {
     --tw-gradient-from: #006f53;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 111, 83, 0));
@@ -71320,6 +71360,10 @@ video {
             box-decoration-break: clone;
   }
 
+  .lg\:bg-18 {
+    background-size: 18.75rem;
+  }
+
   .lg\:bg-auto {
     background-size: auto;
   }
@@ -71330,6 +71374,10 @@ video {
 
   .lg\:bg-contain {
     background-size: contain;
+  }
+
+  .lg\:bg-50\% {
+    background-size: 50%;
   }
 
   .lg\:bg-fixed {
@@ -89661,6 +89709,10 @@ video {
     background-image: url('./assets/background.png');
   }
 
+  .xl\:bg-body-img {
+    background-image: url('./assets/trees.png');
+  }
+
   .xl\:from-primary {
     --tw-gradient-from: #006f53;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 111, 83, 0));
@@ -90217,6 +90269,10 @@ video {
             box-decoration-break: clone;
   }
 
+  .xl\:bg-18 {
+    background-size: 18.75rem;
+  }
+
   .xl\:bg-auto {
     background-size: auto;
   }
@@ -90227,6 +90283,10 @@ video {
 
   .xl\:bg-contain {
     background-size: contain;
+  }
+
+  .xl\:bg-50\% {
+    background-size: 50%;
   }
 
   .xl\:bg-fixed {
@@ -108558,6 +108618,10 @@ video {
     background-image: url('./assets/background.png');
   }
 
+  .\32xl\:bg-body-img {
+    background-image: url('./assets/trees.png');
+  }
+
   .\32xl\:from-primary {
     --tw-gradient-from: #006f53;
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(0, 111, 83, 0));
@@ -109114,6 +109178,10 @@ video {
             box-decoration-break: clone;
   }
 
+  .\32xl\:bg-18 {
+    background-size: 18.75rem;
+  }
+
   .\32xl\:bg-auto {
     background-size: auto;
   }
@@ -109124,6 +109192,10 @@ video {
 
   .\32xl\:bg-contain {
     background-size: contain;
+  }
+
+  .\32xl\:bg-50\% {
+    background-size: 50%;
   }
 
   .\32xl\:bg-fixed {

@@ -10,9 +10,18 @@ module.exports = {
       black: colors.black,
       ctaYellow: '#ffd637'
     },
+    backgroundSize:{
+      'auto':'auto',
+      'cover':'cover',
+      'contain':'contain',
+      '50%':'50%',
+      '18':'18.75rem'
+
+    },
     extend: {
       backgroundImage: theme=>({
-        "hero-img":"url('./assets/background.png')"
+        "hero-img":"url('./assets/background.png')",
+        "body-img":"url('./assets/trees.png')"
       })
     },
   },
