@@ -451,15 +451,15 @@
 </div>
 <!--Section News-->
 <div class="relative">
-    <div class="bg-primary text-white flex flex-row w-10/12 md:w-9/12 lg:w-9/12 xl:w-8/12 rounded-l-full transform
-                translate-x-5 md:translate-x-32 lg:translate-x-44 xl:translate-x-96 absolute -top-6 left-12
-                md:left-16 lg:left-20 xl:left-24">
-        <p class="text-sm lg:text-2xl p-2 lg:px-4">
+    <div class="bg-primary text-white flex flex-row w-10/12 md:w-9/12 lg:w-9/12 xl:w-8/12 2xl:w-9/12 rounded-l-full transform
+                translate-x-6 md:translate-x-32 lg:translate-x-44 xl:translate-x-96 absolute -top-6 left-12
+                md:left-16 lg:left-20 xl:left-24 2xl:left-64">
+        <p class="sm:text-sm lg:text-2xl p-2 lg:px-4">
             Find a Branch or ATM
         </p>
         <div class="flex self-center pr-6">
             <label>
-                <input class="w-28 p-1 pl-3" type="text" placeholder="Enter Zip">
+                <input class="w-28 p-0.5 md:p-1 pl-3" type="text" placeholder="Enter Zip">
             </label>
         </div>
         <div class="flex self-center pr-6">
@@ -494,32 +494,36 @@
 <img class="w-full right-0 h-auto" src="./assets/map.webp" alt="map">
 
 <!--Footer-->
-<footer class="flex flex-col m-6 lg:m-16">
-    <div class="self-center m-3 py-10 border-b-2">
+<footer class="flex flex-col m-6 lg:m-10 text-gray-500">
+    <div class="self-center w-44 2xl:w-52 m-3 py-10 border-b-2">
         <img src="./assets/ADKBank_Logo_Centered_Color-v2.svg" alt="Bank Logo">
     </div>
     <div class="flex flex-col">
-        <div class="flex flex-row justify-center w-full">
+        <div class="flex flex-row justify-between w-full">
             <div>
                 <img src="./assets/FDIC_Group.svg" alt="FDIC LOGO">
             </div>
-            <div class="flex-grow text-center flex-col text-gray-500">
+            <div class="flex-grow text-center text-sm xl:text-md flex-col ">
                 <p>185 Genesee Street</p>
                 <p> Utica, NY 13501</p>
             </div>
-            <div class="flex-none text-gray-500">
-                <p class="text-xs">Digital by TRAINOR</p>
+            <div class="flex flex-col text-sm">
+                <p>Digital by</p>
+                <p> TRAINOR</p>
             </div>
         </div>
-        <ul class="flex flex-row justify-between xl:justify-start pt-8 text-sm lg:w-full text-gray-500">
+        <ul class="flex flex-row justify-between xl:justify-start pt-8 text-xs lg:w-full gap-x-9">
             <li class="lg:pr-2 text-center">
                 <a href="/privacyPolicy">Privacy Policy</a>
             </li>
             <li class="lg:pr-4 text-center">
                 <a href="/cookiePolicy">Cookie Policy</a>
             </li>
-            <li class=" text-center">
-                <a href="/termsConditions">Terms & Conditions</a>
+            <li class="text-center">
+                <a href="/termsConditions" class="flex flex-col xl:flex-row">
+                    <p>Terms & </p>
+                    <p> Conditions</p>
+                </a>
             </li>
         </ul>
     </div>
